@@ -1,4 +1,5 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001";
+// Set in .env.local (see .env.example); trailing slashes are ignored
+const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001").replace(/\/+$/, "");
 
 export interface CampaignVariant {
   id: string;
